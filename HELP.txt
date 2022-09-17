@@ -1,0 +1,23 @@
+***The program is already setup for every agent to work for a 1920 by 1080 screen*****
+
+--- To open the autoselector ---
+	- Open "Agent Select" folder
+	- Open "AgentSelect" .exe (It has the Valorant icon and is an Application file type)
+
+--- To run the autoselector ---
+	- Make sure the settings are how you would like.
+		- Delay is the delay in seconds after clicking on an agent for the program to run.
+		- Clicks is the number of times that the program will click between the agent and the "Lock In" button.
+	
+	- If you either dont have a 1920 by 1080 monitor (Standard size) 
+	  or if you dont have every agent unlocked then set the agents location.
+		- To set an agents location, press the "Set Position Mode" button, then click on the agent you want and
+		  input the X and Y position of the agent on your screen.
+			- To find the X and Y position join a custom game and in the agent select screen take a screenshot
+			  and any image editing software can help you find the coordinates. (Top left is 0,0).
+
+	- To run the autoselector
+		- When you have found a match before you load in to the agent select screen press "Agent Select Mode" button
+		  then press on the agent you would like to autoselect, after the "Delay", it will click back and forth between
+		  the lock in button and the agent "Click" times.
+		

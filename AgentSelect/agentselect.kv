@@ -1,0 +1,401 @@
+<Home>:
+    FloatLayout:
+        size: root.width, root.height
+
+        # Select Agent Button
+        Button:
+            background_color: (1,1,1,1)
+            background_normal:''
+            font_size:'20'
+            color: (0,0,0,1)
+            halign: 'center'
+            valign: 'bottom'
+            text: 'Select Agent Mode'
+            size_hint: {.25, .1}
+            pos_hint: {'x': .05, 'top': .9}
+            on_release: root.modeset('Select')
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Line:
+                    width: 5
+                    rectangle: self.x, self.y, self.width, self.height
+
+        # Set Position Mode Button
+        Button:
+            background_color: (1,1,1,1)
+            background_normal:''
+            font_size:'20'
+            color: (0,0,0,1)
+            halign: 'center'
+            valign: 'bottom'
+            text: 'Set Position Mode'
+            size_hint: {.25, .1}
+            pos_hint: {'x': .05, 'top': .75}
+            on_release: root.modeset('Set')
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Line:
+                    width: 5
+                    rectangle: self.x, self.y, self.width, self.height
+
+        # Settings Button
+        Button:
+            background_color: (1,1,1,1)
+            background_normal:''
+            font_size:'20'
+            color: (0,0,0,1)
+            halign: 'center'
+            valign: 'bottom'
+            text: 'Settings'
+            size_hint: {.25, .1}
+            pos_hint: {'x': .05, 'top': .60}
+            on_release: root.settings()
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Line:
+                    width: 5
+                    rectangle: self.x, self.y, self.width, self.height
+
+        # Character Buttons ********************************************************************************************
+        # LockIn
+        Button:
+            background_color: (0,0,0,0)
+            pos_hint: {'x': .35, 'top': .95}
+            size_hint: {.13, .05}
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Line:
+                    width: 2
+                    rectangle: self.x, self.y, self.width, self.height
+            on_release: root.lockclk()
+            Image:
+                source: 'Images/Lockin_icon.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        # Astra
+        Button:
+            background_color: (0,0,0,0)
+            pos_hint: {'x': .5, 'top': .95}
+            size_hint: {.1, .15}
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Line:
+                    width: 3
+                    rectangle: self.x, self.y, self.width, self.height
+            on_release: root.agentclk("astra")
+            Image:
+                source: 'Images/Astra_icon.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        # Breach
+        Button:
+            background_color: (0,0,0,0)
+            pos_hint: {'x': .62, 'top': .95}
+            size_hint: {.1, .15}
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Line:
+                    width: 3
+                    rectangle: self.x, self.y, self.width, self.height
+            on_release: root.agentclk("breach")
+            Image:
+                source: 'Images/Breach_icon.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        # Brimstone
+        Button:
+            background_color: (0,0,0,0)
+            pos_hint: {'x': .74, 'top': .95}
+            size_hint: {.1, .15}
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Line:
+                    width: 3
+                    rectangle: self.x, self.y, self.width, self.height
+            on_release: root.agentclk("brimstone")
+            Image:
+                source: 'Images/Brimstone_icon.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        # Chamber
+        Button:
+            background_color: (0,0,0,0)
+            pos_hint: {'x': .86, 'top': .95}
+            size_hint: {.1, .15}
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Line:
+                    width: 3
+                    rectangle: self.x, self.y, self.width, self.height
+            on_release: root.agentclk("chamber")
+            Image:
+                source: 'Images/Chamber_icon.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        # Cypher
+        Button:
+            background_color: (0,0,0,0)
+            pos_hint: {'x': .38, 'top': .78}
+            size_hint: {.1, .15}
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Line:
+                    width: 3
+                    rectangle: self.x, self.y, self.width, self.height
+            on_release: root.agentclk("cypher")
+            Image:
+                source: 'Images/Cypher_icon.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        # Fade
+        Button:
+            background_color: (0,0,0,0)
+            pos_hint: {'x': .5, 'top': .78}
+            size_hint: {.1, .15}
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Line:
+                    width: 3
+                    rectangle: self.x, self.y, self.width, self.height
+            on_release: root.agentclk("fade")
+            Image:
+                source: 'Images/Fade_icon.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        # Jett
+        Button:
+            background_color: (0,0,0,0)
+            pos_hint: {'x': .62, 'top': .78}
+            size_hint: {.1, .15}
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Line:
+                    width: 3
+                    rectangle: self.x, self.y, self.width, self.height
+            on_release: root.agentclk("jett")
+            Image:
+                source: 'Images/Jett_icon.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        # KAYO
+        Button:
+            background_color: (0,0,0,0)
+            pos_hint: {'x': .74, 'top': .78}
+            size_hint: {.1, .15}
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Line:
+                    width: 3
+                    rectangle: self.x, self.y, self.width, self.height
+            on_release: root.agentclk("kayo")
+            Image:
+                source: 'Images/KAYO_icon.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        # Killjoy
+        Button:
+            background_color: (0,0,0,0)
+            pos_hint: {'x': .86, 'top': .78}
+            size_hint: {.1, .15}
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Line:
+                    width: 3
+                    rectangle: self.x, self.y, self.width, self.height
+            on_release: root.agentclk("killjoy")
+            Image:
+                source: 'Images/Killjoy_icon.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        # Neon
+        Button:
+            background_color: (0,0,0,0)
+            pos_hint: {'x': .38, 'top': .61}
+            size_hint: {.1, .15}
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Line:
+                    width: 3
+                    rectangle: self.x, self.y, self.width, self.height
+            on_release: root.agentclk("neon")
+            Image:
+                source: 'Images/Neon_icon.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        # Omen
+        Button:
+            background_color: (0,0,0,0)
+            pos_hint: {'x': .5, 'top': .61}
+            size_hint: {.1, .15}
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Line:
+                    width: 3
+                    rectangle: self.x, self.y, self.width, self.height
+            on_release: root.agentclk("omen")
+            Image:
+                source: 'Images/Omen_icon.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        # Phoenix
+        Button:
+            background_color: (0,0,0,0)
+            pos_hint: {'x': .62, 'top': .61}
+            size_hint: {.1, .15}
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Line:
+                    width: 3
+                    rectangle: self.x, self.y, self.width, self.height
+            on_release: root.agentclk("phoenix")
+            Image:
+                source: 'Images/Phoenix_icon.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        # Raze
+        Button:
+            background_color: (0,0,0,0)
+            pos_hint: {'x': .74, 'top': .61}
+            size_hint: {.1, .15}
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Line:
+                    width: 3
+                    rectangle: self.x, self.y, self.width, self.height
+            on_release: root.agentclk("raze")
+            Image:
+                source: 'Images/Raze_icon.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        # Reyna
+        Button:
+            background_color: (0,0,0,0)
+            pos_hint: {'x': .86, 'top': .61}
+            size_hint: {.1, .15}
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Line:
+                    width: 3
+                    rectangle: self.x, self.y, self.width, self.height
+            on_release: root.agentclk("reyna")
+            Image:
+                source: 'Images/Reyna_icon.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        # Sage
+        Button:
+            background_color: (0,0,0,0)
+            pos_hint: {'x': .38, 'top': .44}
+            size_hint: {.1, .15}
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Line:
+                    width: 3
+                    rectangle: self.x, self.y, self.width, self.height
+            on_release: root.agentclk("sage")
+            Image:
+                source: 'Images/Sage_icon.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        # Skye
+        Button:
+            background_color: (0,0,0,0)
+            pos_hint: {'x': .5, 'top': .44}
+            size_hint: {.1, .15}
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Line:
+                    width: 3
+                    rectangle: self.x, self.y, self.width, self.height
+            on_release: root.agentclk("skye")
+            Image:
+                source: 'Images/Skye_icon.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        # Sova
+        Button:
+            background_color: (0,0,0,0)
+            pos_hint: {'x': .62, 'top': .44}
+            size_hint: {.1, .15}
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Line:
+                    width: 3
+                    rectangle: self.x, self.y, self.width, self.height
+            on_release: root.agentclk("sova")
+            Image:
+                source: 'Images/Sova_icon.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        # Viper
+        Button:
+            background_color: (0,0,0,0)
+            pos_hint: {'x': .74, 'top': .44}
+            size_hint: {.1, .15}
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Line:
+                    width: 3
+                    rectangle: self.x, self.y, self.width, self.height
+            on_release: root.agentclk("viper")
+            Image:
+                source: 'Images/Viper_icon.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
+
+        # Yoru
+        Button:
+            background_color: (0,0,0,0)
+            pos_hint: {'x': .86, 'top': .44}
+            size_hint: {.1, .15}
+            canvas.before:
+                Color:
+                    rgba: 0, 0, 0, 1
+                Line:
+                    width: 3
+                    rectangle: self.x, self.y, self.width, self.height
+            on_release: root.agentclk("yoru")
+            Image:
+                source: 'Images/Yoru_icon.png'
+                center_x: self.parent.center_x
+                center_y: self.parent.center_y
